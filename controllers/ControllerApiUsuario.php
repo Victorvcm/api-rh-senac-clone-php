@@ -6,8 +6,8 @@ use Psr\Http\Message\ResponseInterface as Response;
  * Chamada da api Usuario
  *
  * User: Gelvazio Camargo
- * Date: 10/12/2020
- * Time: 17:40
+ * Date: 29/11/2022
+ * Time: 10:15
  */
 // require_once("ControllerApiBase.php");
 require_once ("./core/token.php");
