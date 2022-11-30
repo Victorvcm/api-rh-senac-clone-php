@@ -48,6 +48,7 @@ class Routes {
 
             // Ping
             $app->get('/ping', ControllerApiBase::class . ':callPing');
+            $app->post('/ping', ControllerApiBase::class . ':callPing');
             
             // Folhas de pagamento
             $app->get('/folha', ControllerApiFolhaPagamento::class . ':index');

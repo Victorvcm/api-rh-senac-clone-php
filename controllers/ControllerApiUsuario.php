@@ -86,7 +86,12 @@ class ControllerApiUsuario extends ControllerApiBase {
     public function loginUsuario(Request $request, Response $response, array $args) {
         $body = $request->getParsedBody();
         
+        if(!isset($body)){
+            return $response->withJson(array("dadoslogin" => "false", "body" => "body em branco!"), 200);
+        }
+        
         $token_usuario = isset($body["token_logado"]) ? $body["token_logado"] : false;
+        
         if($token_usuario){
             $dadosLogin = $this->loginComToken($token_usuario);
         } else {
